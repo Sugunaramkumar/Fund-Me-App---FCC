@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Fund Me App</title>
+</head>
+<body>
+    Sai Baba Saranam 
+    Make my family all well
+    <script>
+        async function connect() {
+            if (typeof window.ethereum !== "undefined"){
+                await window.ethereum.request({method: "eth_requestAccounts"})
+                document.getElementById("connectedButton").innerHTML = "Connected!"
+            }else {
+                document.getElementById("connectedButton").innerHTML = "Please install metamask!"
+            }
+    }
+    </script>
+    <button id="connectButton" onclick="connect()"> Connect </button>
+</body>
+</html>
